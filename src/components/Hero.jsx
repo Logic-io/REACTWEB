@@ -1,15 +1,30 @@
 import { portfolio } from '../data/portfolio'
 import BlurText from './ui/BlurText'
+import DotGrid from './ui/DotGrid'
 
 export default function Hero() {
   const { hero } = portfolio
 
   return (
     <section id="home" className="relative flex min-h-screen scroll-mt-20 items-center overflow-hidden pb-20 pt-32">
+      <div className="absolute inset-0 z-0 opacity-55" aria-hidden="true">
+        <DotGrid
+          dotSize={3}
+          gap={25}
+          baseColor="#172554"
+          activeColor="#67e8f9"
+          proximity={140}
+          speedTrigger={120}
+          shockRadius={220}
+          shockStrength={3}
+          resistance={800}
+          returnDuration={1.2}
+        />
+      </div>
       <div className="hero-orb hero-orb-one" aria-hidden="true" />
       <div className="hero-orb hero-orb-two" aria-hidden="true" />
 
-      <div className="section-shell relative grid items-center gap-14 lg:grid-cols-[1.2fr_0.8fr]">
+      <div className="section-shell relative z-10 grid items-center gap-14 lg:grid-cols-[1.2fr_0.8fr]">
         <div>
           <p className="mb-6 flex items-center gap-3 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
             <span className="size-2 rounded-full bg-emerald-300 shadow-[0_0_16px_#6ee7b7]" aria-hidden="true" />
