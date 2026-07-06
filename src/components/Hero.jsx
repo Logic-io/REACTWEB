@@ -68,14 +68,19 @@ export default function Hero() {
             />
             <GlassSurface
               width="calc(100% - 2.5rem)"
-              height={76}
+              height={82}
               borderRadius={16}
-              backgroundOpacity={0.08}
-              saturation={1.5}
-              distortionScale={-90}
-              redOffset={0}
-              greenOffset={8}
-              blueOffset={16}
+              brightness={68}
+              opacity={0.9}
+              blur={14}
+              displace={0.8}
+              backgroundOpacity={0.28}
+              saturation={1.8}
+              distortionScale={-160}
+              redOffset={6}
+              greenOffset={18}
+              blueOffset={30}
+              mixBlendMode="screen"
               className="profile-glass-surface absolute bottom-5 left-5"
             >
               <div className="flex items-center justify-between gap-4">
