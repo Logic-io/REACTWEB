@@ -1,6 +1,7 @@
 import { portfolio } from '../data/portfolio'
 import BlurText from './ui/BlurText'
 import DotGrid from './ui/DotGrid'
+import GlassSurface from './ui/GlassSurface'
 
 export default function Hero() {
   const { hero } = portfolio
@@ -65,7 +66,18 @@ export default function Hero() {
               alt="Professional portrait of Yury Li"
               className="h-full w-full object-cover object-top"
             />
-            <div className="absolute inset-x-5 bottom-5 rounded-2xl border border-white/10 bg-[#060a16]/85 p-4 backdrop-blur-lg">
+            <GlassSurface
+              width="calc(100% - 2.5rem)"
+              height={76}
+              borderRadius={16}
+              backgroundOpacity={0.08}
+              saturation={1.5}
+              distortionScale={-90}
+              redOffset={0}
+              greenOffset={8}
+              blueOffset={16}
+              className="profile-glass-surface absolute bottom-5 left-5"
+            >
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <p className="text-sm font-semibold text-white">Customer-focused strategy</p>
@@ -75,7 +87,7 @@ export default function Hero() {
                   Available
                 </span>
               </div>
-            </div>
+            </GlassSurface>
           </div>
           <div className="absolute -left-5 top-8 hidden rounded-xl border border-cyan-300/20 bg-[#08101f]/90 px-4 py-3 font-mono text-xs text-cyan-200 shadow-xl backdrop-blur sm:block">
             signal / insight / action
